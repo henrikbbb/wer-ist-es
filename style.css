@@ -1,0 +1,74 @@
+.character {
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-align: center; /* Zentriert den Inhalt */
+    border: 2px solid #333; /* Rahmen um das Bild und den Titel */
+    border-radius: 10px; /* Abgerundete Ecken */
+    padding: 10px; /* Innenabstand */
+    background-color: #fff; /* Weißer Hintergrund */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatteneffekt */
+}
+
+.character img {
+    width: 100%; /* Breite des Bildes bleibt dynamisch */
+    height: auto; /* Höhe passt sich an */
+    border: none; /* Entfernt zusätzlichen Rahmen */
+    border-radius: 5px; /* Runde Kanten für das Bild */
+}
+
+.character-name {
+    margin-top: 8px; /* Abstand vom Bild zum Text */
+    font-size: 0.9em; /* Etwas kleinere Schrift */
+    color: #555; /* Grauer Text */
+}
+
+.character.inactive {
+    background-color: #f8f8f8; /* Leichter Grauton, wenn inaktiv */
+    border-color: #aaa; /* Rahmenfarbe wird heller */
+    box-shadow: none; /* Schatten wird entfernt */
+}
+
+.character.inactive img {
+    opacity: 0.3; /* Bild wird blasser */
+}
+
+.character:hover {
+    transform: scale(1.05); /* Leichtes Vergrößern beim Überfahren */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Intensiverer Schatten */
+}
+
+
+#game-board {
+    display: grid;
+    gap: 15px; /* Abstand zwischen den Elementen */
+    justify-content: center; /* Zentriert das Grid horizontal */
+    margin: 20px auto;
+    width: fit-content; /* Passt die Breite an die Inhalte an */
+    grid-auto-rows: min-content; /* Flexibles Raster, passt sich der Höhe an */
+}
+
+#selected-card {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#selected-card-display {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 15px;
+    border: 2px dashed #333;
+    border-radius: 10px;
+    background-color: #fff;
+    min-width: 150px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+#selected-card-display img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 150px;
+    border-radius: 5px;
+    border: 2px solid #333;
+}
